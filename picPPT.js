@@ -104,6 +104,7 @@
     
     automaticPlay: function() {
       var tThis = this;
+      clearInterval(this.intervalId);
       this.intervalId = setInterval(function() {
         var index = (tThis.currentIndex+1) >= tThis.count?0:(tThis.currentIndex+1);
         if(index!=tThis.currentIndex) {
