@@ -16,7 +16,8 @@
     init: function(options) {
       var defaults = {
         "subImgWidth": 55,
-        "isShowTitle": false
+        "isShowTitle": false,
+        "intervalTime": 10000-6180
       };
       var settings = $.extend(defaults, options);
       var picPPT = new PicPPT(this, settings);
@@ -110,7 +111,7 @@
         if(index!=tThis.currentIndex) {
           tThis.showThisImg(index);
         }
-      }, 10000-6180);
+      }, tThis.st.intervalTime);
     },
     
     showThisImg: function(index) {
